@@ -1,0 +1,92 @@
+/* ====== presets ====== */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p, a, input, textarea {
+    margin: 0;
+}
+
+ul{
+    list-style-type: none ;
+}
+a{
+    text-decoration: none;
+}
+
+/* =============================================== */
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: orange;
+}
+aside{
+    padding: 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+    border: solid 1px black;
+}
+.aside-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.navbar-menu{
+    background-color: transparent;
+    border: 0;
+    font-size: 80px;
+    cursor: pointer;
+}
+.logo{
+    width: 80vw;
+}
+.main-h2{
+    font-size: 100px;
+    padding-left: 4rem;
+    padding-top: 4rem;
+}
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+.producto-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.producto-imagen{
+    width: 600px;
+}
+.productos-detalles{
+    background-color: rgb(246, 201, 117);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 30px 0px;
+}
+.producto-nombre{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.producto-precio{
+    font-size: 40px;
+}
+.producto-agregar{
+    border: 0;
+    font-size: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
