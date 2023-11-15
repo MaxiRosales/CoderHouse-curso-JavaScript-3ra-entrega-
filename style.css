@@ -70,9 +70,13 @@ aside{
 }
 .contenedor-productos{
     display: grid;
-    grid-template-columns: repeat(4,440px);
+    grid-template-columns: repeat(4,350px);
     gap: 1rem;
     padding-left: 30px;
+}
+div.producto{
+    border: solid 2px black;
+    overflow: hidden;
 }
 .producto-div{
     display: flex;
@@ -80,7 +84,7 @@ aside{
     align-items: center;
 }
 .producto-imagen{
-    width: 440px;
+    width: 350px;
 }
 .productos-detalles{
     background-color: rgb(246, 201, 117);
@@ -100,6 +104,13 @@ aside{
     font-size: 30px;
 }
 .producto-agregar{
+    border: 0;
+    font-size: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.producto-consultar{
     border: 0;
     font-size: 30px;
     padding: 10px 30px;
