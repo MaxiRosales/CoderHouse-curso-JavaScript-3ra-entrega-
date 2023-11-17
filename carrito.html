@@ -11,21 +11,29 @@
     <div class="contenedor">
         <aside>
             <header>
+                <header>
+                    <div class="divMainTitle">
+                    <h1 class="main-title">-Rosario Motors-</h1>
+                    <p class="main-title">Venta de Vehículos y Accesorios</p>
+                    </div>
+                </header>
             </header>
             <nav>
                 <ul>
                     <li><a class="boton-volver navbar-menu" href="index.html"><i class="bi bi-arrow-return-left"></i> Seguir comprando</a></li>
                 </ul>
             </nav>
-            <footer class="footer-info">texto del footer</footer>
+            <footer class="footer-info">
+                <p class="texto-footer">3ra Entrega Curso JS <br> Maximiliano Rosales</p>
+            </footer>
         </aside>
 
         <main>
             <img class="logo" src="./assets/logo.jpg">
             <h2 class="main-h2"><i class="bi bi-cart"></i>carrito</h2>
             <p id="carrito-vacio" class="carrito-vacio">El carrito está vacio <i class="bi bi-x-circle"></i></p>
-            <div class="contenedor-carrito disabled">
-                <div id="carrito-productos" class="carrito-producto">
+            <div class="contenedor-carrito">
+                <div id="contenedor-carrito-productos" class="contenedor-carrito-productos">
                     <div class="carrito-productos">
                         
                     </div>
@@ -37,7 +45,7 @@
                     <div class="carrito-comprar">
                         <div class="carrito-total">
                             <p>Total:</p>
-                            <p id="total">$1234</p> 
+                            <p id="total"></p> 
                         </div>
                         <button class="carrito-pagar">Comprar ahora</button>
                     </div>
@@ -45,9 +53,9 @@
             </div>
         </main>
     </div>
-
-    
-    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="carrito.js"></script>
+    <script src="main.js"></script>
+    
 </body>
 </html>

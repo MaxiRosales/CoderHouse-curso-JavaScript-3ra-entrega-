@@ -40,12 +40,12 @@ let botonesAgregar = document.querySelectorAll(".producto-agregar")
 
 function cargarProductos(productos){
 
-    contenedorProductos.innerHTML = "";
+    contenedorProductos.innerHTML =" ";
 
     productos.forEach(producto =>{
         const div = document.createElement("div"); 
         div.classList.add("producto");
-        if(producto.id <= 20){
+        if(producto.categoria === "vehiculos"){
         mainH2.innerText = "Vehículos"
         div.innerHTML =`
         <img class="producto-imagen" src="${producto.imagen}">
@@ -55,7 +55,7 @@ function cargarProductos(productos){
             <button id="${producto.id}" class="producto-consultar">Consultar</button>
         </div>
         `;
-    }else if(producto.id >= 21){
+    }else if(producto.categoria === "accesorios"){
         mainH2.innerText = "Accesorios"
         div.innerHTML =`
         <img class="producto-imagen" src="${producto.imagen}">
@@ -66,7 +66,6 @@ function cargarProductos(productos){
         </div>
         `;
     }
-
     contenedorProductos.append(div)
     })
     
@@ -74,6 +73,7 @@ function cargarProductos(productos){
 
 }
 cargarProductos(productos);
+mainH2.innerText = "TODO EL CATÁLOGO"
 
 botonesMenu.forEach(boton => {
     boton.addEventListener("click", (e) =>{
@@ -96,10 +96,10 @@ function actualizarBotonesAgregar() {
 
 let productosEnCarrito;
 
-const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
 if(productosEnCarritoLS){
-    productosEnCarrito = productosEnCarritoLS;
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
 }else{
     productosEnCarrito = [];
 }
