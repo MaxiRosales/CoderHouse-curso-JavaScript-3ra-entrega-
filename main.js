@@ -35,12 +35,12 @@ const productos = [
 const contenedorProductos = document.querySelector(".contenedor-productos");
 const botonesMenu = document.querySelectorAll(".boton-menu");
 const mainH2 = document.querySelector(".main-h2");
-let botonesAgregar = document.querySelectorAll(".producto-agregar")
-
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const botonesConsultar = document.querySelectorAll(".producto-consultar")
 
 function cargarProductos(productos){
 
-    contenedorProductos.innerHTML =" ";
+    contenedorProductos.innerHTML ="";
 
     productos.forEach(producto =>{
         const div = document.createElement("div"); 
@@ -67,11 +67,10 @@ function cargarProductos(productos){
         `;
     }
     contenedorProductos.append(div)
-    })
-    
+    })    
     actualizarBotonesAgregar();
-
 }
+
 cargarProductos(productos);
 mainH2.innerText = "TODO EL CATÁLOGO"
 
@@ -95,7 +94,6 @@ function actualizarBotonesAgregar() {
 }
 
 let productosEnCarrito;
-
 let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
 if(productosEnCarritoLS){
@@ -117,3 +115,22 @@ function agregarAlCarrito(e){
     }
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
+
+function BotonesConsultar() {
+    const botonesConsultar = document.querySelectorAll(".producto-consultar");
+    
+    botonesConsultar.forEach(boton => {
+        boton.addEventListener("click", abrirEnlace);
+    });
+
+    function abrirEnlace() {
+        const url = "./formulario.html";
+        const enlace = document.createElement("a");
+        enlace.href = url;
+        enlace.target = "_blank";
+        enlace.click();
+    }
+}
+document.addEventListener("DOMContentLoaded", function() {
+    BotonesConsultar();
+});
